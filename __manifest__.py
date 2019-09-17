@@ -29,5 +29,7 @@
     ],
     'data': [
         'views/project_task.xml',
+        'data/account_analytic_line_type.xml',
+        'security/ir.model.access.csv',
     ]
 }
