@@ -20,7 +20,7 @@
 
 {
     'name': 'Project Task Types',
-    'version': '1.0',
+    'version': '1.0.1',
     'author': 'Humanytek',
     'website': 'http://humanytek.com',
     'depends': [
