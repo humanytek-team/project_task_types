@@ -2,11 +2,11 @@ from odoo import api, fields, models
 
 
 class AccountAnalyticLineType(models.Model):
-    _name = 'account.analytic.line.type'
-    _description = 'Analytic Line Type'
+    _name = "account.analytic.line.type"
+    _description = "Analytic Line Type"
 
     name = fields.Char(
-        compute='_get_name',
+        compute="_get_name",
         store=True,
     )
     code = fields.Char(
@@ -16,7 +16,7 @@ class AccountAnalyticLineType(models.Model):
         required=True,
     )
 
-    @api.depends('code', 'description')
+    @api.depends("code", "description")
     def _get_name(self):
         for r in self:
-            r.name = '{code} - {description}'.format(code=r.code, description=r.description)
+            r.name = f"{r.code} - {r.description}"
