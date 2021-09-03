@@ -5,12 +5,14 @@
     "website": "http://humanytek.com",
     "depends": [
         "account",
-        "project",
         "hr_timesheet",
+        "project",
+        "sale_timesheet_enterprise",
     ],
     "data": [
         "security/ir.model.access.csv",
         "data/account_analytic_line_type.xml",
         "views/project_task.xml",
+        "views/project_task_create_timesheet.xml",
     ],
 }
