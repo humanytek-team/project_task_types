@@ -15,6 +15,9 @@ class AccountAnalyticLineType(models.Model):
     description = fields.Char(
         required=True,
     )
+    active = fields.Boolean(
+        default=True,
+    )
 
     @api.depends("code", "description")
     def _get_name(self):
