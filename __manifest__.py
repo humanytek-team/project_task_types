@@ -1,6 +1,6 @@
 {
     "name": "Project Task Types",
-    "version": "1.0.1",
+    "version": "17.0.1.0.1",
     "author": "Humanytek",
     "website": "http://humanytek.com",
     "depends": [
