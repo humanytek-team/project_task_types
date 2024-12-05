@@ -19,17 +19,19 @@
 ##############################################################################
 
 {
-    'name': 'Project Task Types',
-    'version': '1.0.1',
-    'author': 'Humanytek',
-    'website': 'http://humanytek.com',
-    'depends': [
-        'account',
-        'project',
+    "name": "Project Task Types",
+    "version": "17.0.1.0.1",
+    "author": "Humanytek",
+    "website": "http://humanytek.com",
+    "depends": [
+        "account_accountant",
+        "project",
     ],
-    'data': [
-        'views/project_task.xml',
-        'data/account_analytic_line_type.xml',
-        'security/ir.model.access.csv',
-    ]
+    "data": [
+        "views/project_task.xml",
+        "data/account_analytic_line_type.xml",
+        "security/ir.model.access.csv",
+    ],
+    "installable": True,
+    "application": False,
 }
