@@ -15,4 +15,5 @@
         "views/project_task.xml",
         "views/project_task_create_timesheet.xml",
     ],
+    "installable": False,
 }
