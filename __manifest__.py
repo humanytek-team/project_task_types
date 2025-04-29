@@ -6,6 +6,7 @@
     "depends": [
         "account",
         "hr_timesheet",
+        "timesheet_grid",
         "project",
         "sale_timesheet_enterprise",
     ],
