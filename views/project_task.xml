@@ -6,10 +6,7 @@
         <field name="inherit_id" ref="sale_timesheet.project_task_view_form_inherit_sale_timesheet"/>
         <field name="arch" type="xml">
             <xpath expr="//field[@name='timesheet_ids']//field[@name='name']" position="before">
-                <field name="line_type_id" attrs="{
-                    'column_invisible': [('parent.sale_line_id', '!=', False)],
-                    'required': [('parent.sale_line_id', '!=', False)]
-                }" />
+                <field name="line_type_id" column_invisible="parent.sale_line_id" required="not parent.sale_line_id"/>
             </xpath>
             <xpath expr="//field[@name='timesheet_ids']/list/field[@name='so_line']" position="attributes">
                 <attribute name="optional"/>
