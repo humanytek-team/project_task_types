@@ -8,12 +8,31 @@
             <xpath expr="//field[@name='timesheet_ids']//field[@name='name']" position="before">
                 <field name="line_type_id" column_invisible="parent.sale_line_id" required="not parent.sale_line_id"/>
             </xpath>
-            <xpath expr="//field[@name='timesheet_ids']/list/field[@name='so_line']" position="attributes">
+            <xpath expr="//field[@name='timesheet_ids']/list/field[@name='so_line'][1]" position="attributes">
                 <attribute name="optional"/>
                 <!-- TODO MIG 18 -->
-                <!-- <attribute name="domain"> [('is_service', '=', True), ('order_partner_id',
-                    'child_of', parent.commercial_partner_id), ('is_expense', '=', False), ('state',
-                    'in', ['sale', 'done']), ('order_id', '=', parent.sale_order_id)] </attribute> -->
+                <attribute name="domain">
+[
+    ("is_service", "=", True),
+    ("order_partner_id.commercial_partner_id.id", "parent_of", parent.partner_id),
+    ("is_expense", "=", False),
+    ("state", "in", ["sale", "done"]),
+    ("is_downpayment", "=", False),
+    ("order_id", "=", parent.sale_order_id),
+] </attribute>
+            </xpath>
+            <xpath expr="//field[@name='timesheet_ids']/list/field[@name='so_line'][2]" position="attributes">
+                <attribute name="optional"/>
+                <!-- TODO MIG 18 -->
+                <attribute name="domain">
+[
+    ("is_service", "=", True),
+    ("order_partner_id.commercial_partner_id.id", "parent_of", parent.partner_id),
+    ("is_expense", "=", False),
+    ("state", "in", ["sale", "done"]),
+    ("is_downpayment", "=", False),
+    ("order_id", "=", parent.sale_order_id),
+] </attribute>
             </xpath>
         </field>
     </record>
