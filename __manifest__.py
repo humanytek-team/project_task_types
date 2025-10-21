@@ -15,6 +15,7 @@
         "data/account_analytic_line_type.xml",
         "views/project_task.xml",
         "views/project_task_create_timesheet.xml",
+        "views/account_analytic_line.xml",
     ],
     "license": "AGPL-3",
 }
