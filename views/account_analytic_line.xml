@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id="account_analytic_line_type_form_inherit" model="ir.ui.view">
+            <field name="name">account.analytic.line.type.form.inherit</field>
+            <field name="model">account.analytic.line</field>
+            <field name="inherit_id" ref="sale_timesheet.hr_timesheet_line_form_inherit"/>
+            <field name="arch" type="xml">
+                <xpath expr="//div[@class='o_row']" position="after">
+                    <field name="line_type_id" string="Type"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>
