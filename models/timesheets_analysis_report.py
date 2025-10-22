@@ -14,7 +14,9 @@ class TimeSheetAnalysisReport(models.Model):
     @property
     def _table_query(self):
         return """
-            SELECT A.*       
+            SELECT A.*,
+            (timesheet_revenues + A.amount) AS margin,
+            (A.unit_amount - billable_time) AS non_billable_time
             FROM (
                 %s %s %s
             ) A
